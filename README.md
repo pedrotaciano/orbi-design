@@ -1,8 +1,8 @@
 # Orbi design
 
-O jeito Orbi de desenhar os apps dela (MEC Enem, MEC Idiomas, MEC Livros, MEC Dados), como uma skill para agentes (Claude Code, Codex, Cursor, omp e outros). É o processo da [`vignelli`](https://github.com/pedrotaciano/vignelli) com duas fontes a mais para o sentido da peça e um número para fechar cada entrega:
+O jeito Orbi de desenhar os apps dela (MEC Enem, MEC Idiomas, MEC Livros, MEC Dados), como uma skill para agentes (Claude Code, Codex, Cursor, omp e outros). É o processo da [`vignelli`](https://github.com/pedrotaciano/vignelli) com o uso medido e as referências da Orbi no sentido da peça, e um número para fechar cada entrega:
 
-1. **Semântica:** o que a peça significa. O uso medido no BigQuery entra no sentido ao lado das referências do canal [hyper—index](https://www.are.na/sinco-institute/hyper-index) do Are.na. Dados e referências vão para dois subagentes em paralelo, que devolvem só as linhas da tabela.
+1. **Semântica:** o que a peça significa. O uso medido no BigQuery entra no sentido ao lado das referências do Are.na (o canal [hyper—index](https://www.are.na/sinco-institute/hyper-index) e os canais orbi e mec da conta, com os subcanais) e das telas de apps em produção do [Mobbin](https://mobbin.com). Dados e referências vão para dois subagentes em paralelo, que devolvem só as linhas da tabela.
 2. **Sintaxe:** o sistema de design aplicado sem exceção. As doze checagens S1–S12 da `vignelli`; uma falha é bug e se corrige no token ou no componente, nunca na página.
 3. **Pragmática:** o veredito é de um humano. A entrega traz o bloco de revisão e um "medir depois": o sinal que deve mudar se a peça for entendida, com a linha de base medida.
 
@@ -22,7 +22,8 @@ Para usar, chame `/orbi-design` ou peça algo como "desenha a tela de lição do
 ## Precisa de
 
 - Node e o `bq` (Google Cloud SDK) com leitura no projeto `orbi-edu-prd`. Sem acesso, o script diz o erro e a entrega declara que os dados não foram consultados.
-- O MCP do [Are.na](https://www.are.na). Sem ele, os conceitos vêm dos sinais, do `DESIGN.md` e do pedido, e a entrega declara que o Are.na não foi consultado.
+- Para o Are.na, o `scripts/arena.mjs` (API v3, só leitura) com `ARENA_TOKEN`, um [token pessoal](https://www.are.na/developers/personal-access-tokens) da conta sinco institute, ou o MCP do Are.na. Sem nenhum dos dois, só os canais públicos, sem busca, e a entrega diz o que ficou de fora.
+- O MCP do [Mobbin](https://mobbin.com). Sem ele, a entrega declara que o Mobbin não foi consultado.
 - A pasta da Orbi (`$ORBI`, `references/recursos.md`): a marca, o `DESIGN.md` de cada app e o `wisdom.md`.
 
 ## Melhor com

@@ -13,7 +13,7 @@ A orbi-design é o `poteto-mode` refeito para o design da Orbi. A estrutura e o 
 | `skills/poteto-mode/playbooks/<título>.md`: "You own…", passos copiados para a lista de tarefas, "Reply:" | `playbooks/<título>.md`: "Você é dona…", passos, "Resposta:" |
 | *Opening a PR*, roteiro que os outros rodam | Semântica, Sintaxe e Pragmática, as fases que os roteiros rodam, cada uma com a sua porta |
 | *Feature*, *Prototype*, *Investigation*, *Babysit*, *Authoring a skill*, *Eval* | Design novo, Variações, Pesquisa e Revisão, Medir depois, Editar a skill, Eval |
-| `skills/poteto-mode/scripts/` | `scripts/consulta.mjs`, `scripts/medir.mjs` |
+| `skills/poteto-mode/scripts/` | `scripts/consulta.mjs`, `scripts/medir.mjs`, `scripts/arena.mjs` |
 | `skills/principle-<título>/SKILL.md` | `principios/<nome>.md` e `../vignelli/principios/<nome>.md` |
 | `principle-explain-the-number` | `principios/explique-o-numero.md` |
 | `principle-build-the-lever`, `principle-encode-lessons-in-structure`, `correct` | as regras de dados como script (`consulta.mjs`) e como teste, não como texto |
@@ -30,7 +30,7 @@ O processo (semântica, sintaxe, pragmática), os princípios do Canon e as chec
 ## Orbi
 
 - Dados: o projeto BigQuery `orbi-edu-prd`, datasets `_curated` dos apps. As receitas de `references/dados.md` rodaram em 25/11/2026. Os nomes dos códigos do MEC Idiomas vêm do código do app (`ContentReportCategory`, `LESSON_FEEDBACK_REASONS`).
-- Referências: o canal [hyper—index](https://www.are.na/sinco-institute/hyper-index) do Are.na, da conta sinco institute, e os (sinco)—semântica e (sinco)—sintaxe da triagem de 23/11/2026.
+- Referências: o canal [hyper—index](https://www.are.na/sinco-institute/hyper-index) do Are.na, da conta sinco institute, os (sinco)—semântica e (sinco)—sintaxe da triagem de 23/11/2026, e os canais orbi e mec da mesma conta, com os subcanais (25/11/2026). A leitura é a [API v3 do Are.na](https://www.are.na/developers), que proíbe a coleta em massa: por isso a busca, nunca o canal inteiro. As telas e os fluxos de apps em produção são do [Mobbin](https://mobbin.com), pelo MCP dele.
 - Sabedorias: `wisdom.md` da pasta da Orbi; `o-uso-diz-o-sentido` usa a sinergia (sabedoria 4).
 
 Texto da skill: Orbi, CC-BY-4.0.

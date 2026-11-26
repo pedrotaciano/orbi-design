@@ -1,6 +1,6 @@
 ---
 name: orbi-design
-description: "O jeito Orbi de desenhar os apps dela: o Vignelli Canon (semântica, sintaxe, pragmática) com o sentido decidido também pelo uso medido no BigQuery e pelas referências do canal hyper—index do Are.na, e cada entrega fechada por um humano e por um número a medir depois. Use para desenhar, redesenhar ou revisar tela, peça, componente ou fluxo do MEC Enem, MEC Idiomas, MEC Livros ou MEC Dados, ou para /orbi-design."
+description: "O jeito Orbi de desenhar os apps dela: o Vignelli Canon (semântica, sintaxe, pragmática) com o sentido decidido também pelo uso medido no BigQuery, pelas referências do Are.na (o hyper—index e os canais orbi e mec) e pelas telas do Mobbin, e cada entrega fechada por um humano e por um número a medir depois. Use para desenhar, redesenhar ou revisar tela, peça, componente ou fluxo do MEC Enem, MEC Idiomas, MEC Livros ou MEC Dados, ou para /orbi-design."
 ---
 
 # Orbi design
@@ -16,6 +16,7 @@ Os outros gatilhos moram só aqui:
 - Primeira mensagem → diga o objetivo, a peça (o que é, para quem, a próxima ação de quem usa), o app e o dataset dele (`references/dados.md` › Mapa). Rode `node <esta pasta>/scripts/medir.mjs <pasta do app>`; um sinal vencido entra na Semântica como pergunta. Abra cada brief de subagente e a entrega com o objetivo.
 - Iniciar um subagente → a primeira linha do brief é `Leia <pasta>/worker.md antes de tudo.`, com `<pasta>` o caminho absoluto desta pasta. O resto do brief é o objetivo e a tarefa.
 - Uma pergunta sobre quem usa → `scripts/consulta.mjs`, com o `--muda` escrito antes de rodar. Nunca uma consulta fora dele. Um número → **Explique o número** antes de usar.
+- Uma leitura do Are.na → `scripts/arena.mjs` (`references/arena.md`); o MCP só para o canal privado ou a busca sem `ARENA_TOKEN`. Uma referência de produto → o Mobbin (`references/mobbin.md`). Nunca uma ferramenta do Are.na ou do Mobbin que escreve.
 - Uma bifurcação que renderizar resolve → **Variações**, em vez de perguntar. Uma que uma consulta resolve → rode a consulta.
 - Peça desenhada → as checagens S1–S12 (`../vignelli/references/checagens-sintaxe.md`). Uma falha é bug de design: corrija no token ou no componente, nunca na página, e rode todas de novo.
 - Fim de toda entrega → o bloco de revisão de **Pragmática**. Nunca "pronto", "aprovado" nem "funciona": quem diz é o humano.
@@ -55,9 +56,9 @@ Leia o arquivo inteiro de cada princípio que aplicar. Cada entrada diz quando e
 
 ## Autonomia
 
-**Faça.** Ler, pesquisar no Are.na, consultar o BigQuery pelo script, desenhar variantes, corrigir uma violação: siga sem perguntar.
+**Faça.** Ler, pesquisar no Are.na e no Mobbin, consultar o BigQuery pelo script, desenhar variantes, corrigir uma violação: siga sem perguntar.
 
-**Sempre pare** para o que é do humano: escolher entre variantes, uma contradição de gosto entre o dado e o pedido, o veredito. E antes de qualquer escrita fora da pasta do projeto: o Are.na e o BigQuery são só leitura; deploy e mensagem a alguém de fora esperam ele.
+**Sempre pare** para o que é do humano: escolher entre variantes, uma contradição de gosto entre o dado e o pedido, o veredito. E antes de qualquer escrita fora da pasta do projeto: o Are.na, o Mobbin e o BigQuery são só leitura; deploy e mensagem a alguém de fora esperam ele.
 
 **Sobreposições da sessão:** "não para", "vou dormir", "segue até o fim" → siga até o bloco de revisão sem parar nas escolhas reversíveis, e deixe cada uma escrita em "Decida".
 
